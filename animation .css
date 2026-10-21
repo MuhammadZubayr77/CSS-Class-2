@@ -61,12 +61,14 @@
 
 .moving_images img {
     width: 120px;
+    flex-shrink: 0;
 }
 
 .moving_images {
     display: flex;
-    gap: 70px;
-    overflow-x: scroll;
+    /* gap: 70px; */
+    /* overflow-x: scroll; */
+    overflow: hidden;
     scrollbar-width: none;
 }
 
@@ -84,5 +86,44 @@
 
     100% {
         transform: translateX(-100%);
+    }
+}
+
+
+.roller img {
+    width: 35vw;
+    height: 75vh;
+    border-radius: 25px;
+}
+
+.roller {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.roller-track {
+    animation: sliding 8s linear infinite;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vertical-roller {
+    margin-top: 50px;
+    justify-self: end;
+    height: 75vh;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+
+@keyframes sliding {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
     }
 }
