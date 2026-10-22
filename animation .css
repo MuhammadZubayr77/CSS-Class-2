@@ -109,6 +109,10 @@
     gap: 20px;
 }
 
+.roller-track:hover {
+    animation-play-state: paused;
+}
+
 .vertical-roller {
     margin-top: 50px;
     justify-self: end;
@@ -126,4 +130,38 @@
     100% {
         transform: translateY(-50%);
     }
+}
+
+.mother div {
+    width: 90%;
+    height: 80vh;
+    border-radius: 20px;
+    justify-self: center;
+    margin-bottom: 30px;
+    position: sticky;
+}
+
+.child1 {
+    background-color: goldenrod;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.child2 {
+    background-color: plum;
+    z-index: 2;
+    top: 30px;
+}
+
+.child3 {
+    background-color: skyblue;
+    z-index: 3;
+    top: 50px;
+}
+
+.mother {
+    height: 80vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
